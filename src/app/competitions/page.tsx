@@ -1,5 +1,5 @@
-import { Competition } from "@/types/football";
 import Link from "next/link";
+import { Competition } from "@/types/football";
 
 async function getCompetitions() {
   const res = await fetch("https://api.football-data.org/v4/competitions", {
@@ -10,7 +10,7 @@ async function getCompetitions() {
   return res.json();
 }
 
-export default async function Home() {
+export default async function CompetitionsPage() {
   let data;
   try {
     data = await getCompetitions();
